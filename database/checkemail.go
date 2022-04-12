@@ -8,6 +8,12 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 )
 
+/**
+ * CheckEmail - Check if email are using in database
+ * @email: the email to verify
+ *
+ * Return: (user, if exists, id of user)
+ */
 func CheckEmail(email string) (models.User, bool, string) {
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()

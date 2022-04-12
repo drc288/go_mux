@@ -15,7 +15,10 @@ import (
 // Mannage routes, CORS & Run the sercice
 func Mannage() {
 	router := mux.NewRouter()
+
 	router.HandleFunc("/register", middlew.CheckDatabase(routes.Register)).Methods("POST")
+	router.HandleFunc("/login", middlew.CheckDatabase(routes.Login)).Methods("POST")
+	router.HandleFunc("/showprofile", middlew.CheckDatabase(middlew.ValidateJWT(routes.))).Methods("POST")
 
 	PORT := os.Getenv("PORT")
 	if PORT == "" {
