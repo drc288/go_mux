@@ -14,7 +14,7 @@ import (
  */
 func LoginPass(email string, password string) (models.User, bool) {
 	myUser, yes, _ := CheckEmail(email)
-	if yes == false {
+	if !yes {
 		return myUser, false
 	}
 
