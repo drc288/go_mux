@@ -8,7 +8,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-var clientOptions = options.Client().ApplyURI("mongodb+srv://drose:a9UsarArLY5R6LA@gomux.t13uw.mongodb.net/test")
+var clientOptions = options.Client().ApplyURI("mongodb+srv://drose:_PASS_@gomux.t13uw.mongodb.net/test")
 var MongoCN = MongoDBConnection()
 
 var (
